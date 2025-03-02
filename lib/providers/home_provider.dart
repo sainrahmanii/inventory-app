@@ -6,7 +6,7 @@ class HomeProvider extends ChangeNotifier {
   final ItemServices _itemServices = ItemServices();
   HomeProvider() {
     _isLoading = false;
-    _getItems();
+    getItems();
   }
 
   late bool _isLoading;
@@ -18,7 +18,7 @@ class HomeProvider extends ChangeNotifier {
 
   List<Barang> listItems = [];
 
-  void _getItems() async {
+  void getItems() async {
     isLoading = true;
 
     final result = await _itemServices.getItems();
