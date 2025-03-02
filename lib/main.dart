@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventory_app/providers/auth_providers.dart';
+import 'package:inventory_app/providers/home_provider.dart';
 import 'package:inventory_app/ui/pages/home_page.dart';
 import 'package:inventory_app/ui/pages/login_page.dart';
 import 'package:provider/provider.dart';
@@ -26,6 +27,9 @@ class MainApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => AuthProviders(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => HomeProvider(),
         )
       ],
       child: MaterialApp(
